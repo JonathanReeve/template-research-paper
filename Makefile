@@ -1,7 +1,7 @@
 default: my-essay.html
 
 %.html: %.md
-	pandoc --citeproc --template=templates/template.html -o $@ $<
+	pandoc --citeproc --standalone --template=templates/template.html -o $@ $<
 
 %.pdf: %.md
-	pandoc --citeproc --template=templates/template.tex -o $@ $<
+	pandoc --citeproc --standalone --template=templates/template.tex -o $@ $<
